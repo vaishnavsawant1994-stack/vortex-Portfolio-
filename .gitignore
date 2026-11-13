@@ -1,0 +1,21 @@
+# Local secrets — never commit
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+node_modules/
+.venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+.DS_Store
+Thumbs.db
+.netlify/
+.vscode/
+playwright-report/
+test-results/
+QA_RESULTS_V15.json
+QA_PERFORMANCE_V15.json
+*.log

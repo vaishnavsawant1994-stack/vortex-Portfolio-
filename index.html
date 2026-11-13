@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#09090a" />
+  <meta name="color-scheme" content="dark light" />
+  <script>(function(){try{var t=localStorage.getItem('gs-portfolio-theme');document.documentElement.dataset.theme=t==='light'?'light':'dark'}catch(e){document.documentElement.dataset.theme='dark'}})();</script>
+  <script>(function(){
+  var root=document.documentElement;
+  var choice='auto';
+  try{var saved=localStorage.getItem('gs-motion-choice');if(saved==='smooth'||saved==='full')choice=saved;}catch(e){}
+  var reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var slow=Boolean(navigator.connection && (navigator.connection.saveData || /(^|-)2g$/.test(navigator.connection.effectiveType||''))) || (navigator.deviceMemory>0 && navigator.deviceMemory<=4) || (navigator.hardwareConcurrency>0&&navigator.hardwareConcurrency<=4);
+  var narrow=matchMedia('(max-width: 680px)').matches;
+  var profile=reduced?'reduced':choice==='smooth'?'economical':choice==='full'?'cinematic':(slow||narrow)?'economical':'balanced';
+  root.dataset.motionProfile=profile;
+  root.dataset.motionChoice=choice;
+})();</script>
+  <link rel="preload" as="image" href="assets/hero-person-460.webp" media="(max-width: 680px)" />
+  <link rel="preload" as="image" href="assets/hero-person-740.webp" media="(min-width: 681px) and (max-width: 1180px)" />
+  <link rel="preload" as="image" href="assets/hero-person-hd.webp" media="(min-width: 1181px)" />
+  <meta name="description" content="Gaurav Sharma — a portfolio of software, systems and things shipped. A video-reference-inspired interactive experience." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Gaurav Sharma® — Full-Stack Engineer" />
+  <meta property="og:description" content="Cinematic software engineer portfolio with projects, experience and an interactive toolkit." />
+  <meta name="twitter:card" content="summary" />
+  <noscript><style>.site-loader{display:none!important}.reveal{opacity:1!important;transform:none!important}.hero{height:auto!important;min-height:780px!important}.nav{display:flex!important;flex-wrap:wrap!important;max-width:100%!important}@media(max-width:980px){.nav{position:static!important;margin:15px!important;justify-content:center!important}.header{position:relative!important;flex-wrap:wrap!important}.site-shell{overflow:visible!important}}</style></noscript>
+  <title>Gaurav Sharma® — Full-Stack Engineer</title>
+  <link rel="stylesheet" href="site.css" />
+  <script src="site-config.js" defer></script>
+  <script src="site.js" defer></script>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+</head>
+<body>
+  <a href="#mainContent" class="skip-to-content">SKIP TO CONTENT <span aria-hidden="true">↘</span></a>
+  <div class="noise-overlay" aria-hidden="true"></div>
+  <div id="cursor" aria-hidden="true"></div>
+  <div id="cursorRing" aria-hidden="true"></div>
+  <div class="site-loader" id="loader" aria-label="Loading portfolio">
+    <div class="loader-glow"></div>
+    <canvas id="loaderParticles" aria-hidden="true"></canvas>
+    <div class="loader-core">GS</div>
+    <button class="skip-intro mono" type="button" id="skipIntro" aria-label="Skip intro animation">SKIP INTRO ↗</button><div class="loader-label">INITIALIZING EXPERIENCE <span id="loadingNumber">00</span>%</div>
+  </div>
+  <div class="site-shell" id="siteShell">
+    <div class="top-progress" id="topProgress" aria-hidden="true"></div>
+    <header class="header" id="header">
+      <a href="#home" class="brand" aria-label="Gaurav Sharma — Home"><span class="brand-symbol">G<span class="brand-period">.</span>S<span class="brand-star">✳</span></span><span class="brand-meta">INDEPENDENT<br />ENGINEER</span></a>
+      <nav class="nav" id="nav" aria-label="Main navigation">
+        <a href="#home" class="nav-link active">HOME</a>
+        <a href="#about" class="nav-link">ABOUT</a>
+        <a href="#work" class="nav-link">WORK</a>
+        <a href="#experience" class="nav-link">EXPERIENCE</a>
+        <a href="#stack" class="nav-link">STACK</a>
+        <a href="#contact" class="nav-link">CONTACT</a>
+      </nav>
+      <div class="header-end"><span class="availability"><span class="availability-dot"></span> AVAILABLE FOR WORK</span><a class="header-cta magnetic" href="#contact">LET'S TALK <span>↗</span></a></div>
+      <button class="theme-toggle" type="button" id="themeToggle" aria-label="Switch to light theme" aria-pressed="false" title="Switch to light theme"><span class="theme-icon" aria-hidden="true">☀</span><span class="theme-label">LIGHT</span></button>
+      <button class="mobile-toggle" type="button" id="mobileToggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span><span></span></button>
+    </header>
+
+    <main id="mainContent" tabindex="-1">
+      <section class="hero section" id="home" data-nav="home">
+        <div class="hero-ambient"></div>
+        <div class="hero-eyebrow mono"><span class="status-spark">✳</span> PORTFOLIO / 2026 <span class="eyebrow-dash"></span> BUILDING THINGS THAT ACTUALLY WORK</div>
+        <div class="hero-big-wrap"><div class="hero-giant" aria-hidden="true">PORTFOLIO</div></div>
+        <div class="hero-body">
+          <div class="hero-left">
+            <div class="hero-mini-label mono"><span class="red-dot"></span> HELLO WORLD, I'M</div>
+            <h1 class="hero-name condensed">GAURAV<br /><em>SHARMA<span class="period">.</span></em></h1>
+            <div class="hero-underline"></div>
+            <p class="hero-intro">Full-stack engineer. Backend obsessive. Building systems that survive the real world — not just the demo.</p>
+            <div class="hero-actions"><a href="#work" class="pill-button primary magnetic">EXPLORE MY WORK <span>↗</span></a><a href="#about" class="text-button">MORE ABOUT ME <span>↓</span></a></div>
+            <div class="hero-fineprint mono">BASED IN INDIA <span class="red-dot"></span> BUILDING EVERYWHERE</div>
+          </div>
+          <div class="hero-portrait-wrap" id="heroPerson">
+            <div class="person-stage" id="portraitCard">
+              <div class="person-aura" aria-hidden="true"></div>
+              <picture>
+                <source srcset="assets/hero-person-460.webp" media="(max-width: 680px)" type="image/webp" /><source srcset="assets/hero-person-740.webp" media="(max-width: 1180px)" type="image/webp" /><source srcset="assets/hero-person-hd.webp" type="image/webp" />
+                <img class="person-cutout" src="assets/hero-person-hd.webp" alt="Recreated illustration of a developer in a black suit, standing in front of red lettering" width="1024" height="1536" fetchpriority="high" decoding="async" />
+              </picture>
+              <div class="portrait-floor" aria-hidden="true"></div>
+            </div>
+          </div>
+          <div class="hero-right">
+            <div class="right-top mono">WHAT I'M ABOUT <span>↘</span></div>
+            <p class="right-tagline">Building software for Indian small businesses, people, and the problems everyone else scrolls past.</p>
+            <div class="hero-stat-grid"><div><div class="stat-val">04<span>+</span></div><div class="stat-desc mono">YEARS BUILDING</div></div><div><div class="stat-val">12<span>+</span></div><div class="stat-desc mono">PROJECTS SHIPPED</div></div><div><div class="stat-val">1.2<span>M</span></div><div class="stat-desc mono">REQUESTS / DAY</div></div></div>
+            <div class="hero-coordinates mono">26°55′ N &nbsp; 75°49′ E <span>↗</span></div>
+          </div>
+        </div>
+        <div class="hero-edge-left mono">KEEP SCROLLING TO EXPLORE ↙</div>
+        <div class="hero-bottom-bar"><span class="mono">© 2026 / GAURAV SHARMA</span><span class="scroll-indicator mono">SCROLL TO EXPLORE <span class="scroll-rail"><i></i></span></span><span class="mono">DESIGNED TO BE DIFFERENT ↗</span></div>
+      </section>
+
+      <div class="tech-marquee" aria-label="Technologies: TypeScript, Node.js, Go, Python, PostgreSQL, Redis, Kafka">
+        <div class="marquee-track" aria-hidden="true"><span>TYPESCRIPT</span><b>✳</b><span>NODE.JS</span><b>✳</b><span>GO</span><b>✳</b><span>PYTHON</span><b>✳</b><span>POSTGRESQL</span><b>✳</b><span>REDIS</span><b>✳</b><span>KAFKA</span><b>✳</b><span>TYPESCRIPT</span><b>✳</b><span>NODE.JS</span><b>✳</b><span>GO</span><b>✳</b><span>PYTHON</span><b>✳</b><span>POSTGRESQL</span><b>✳</b><span>REDIS</span><b>✳</b><span>KAFKA</span><b>✳</b></div>
+      </div>
+
+      <section class="about section section-pad" id="about" data-nav="about">
+        <div class="section-topline mono reveal"><span><span class="red-dot"></span> 01 / THE STORY</span><span>BACKGROUND &amp; PHILOSOPHY ↓</span></div>
+        <div class="about-grid">
+          <div class="about-left reveal">
+            <div class="tiny-pre mono">A LITTLE CONTEXT / THE HUMAN</div>
+            <h2 class="section-title condensed about-reference-heading">BACKGROUND<br /><em>&amp; PHILOSOPHY.</em></h2>
+            <div class="about-index-list mono"><div><span>01</span> ENGINEERING FIRST</div><div><span>02</span> SHIP &amp; LEARN</div><div><span>03</span> BUILD FOR REAL PEOPLE</div></div>
+          </div>
+          <div class="about-right reveal">
+            <span class="number-label mono">[ NOT JUST ANOTHER DEVELOPER ]</span>
+            <p class="about-lede">I grew up debugging the billing software at my father's shop in Jaipur. Today I design systems that have to survive <em>patchy 4G, budget phones and festival-day traffic spikes.</em> I obsess over the boring parts — latency, observability, graceful failure — because that is what makes the exciting parts feel effortless.</p>
+            <div class="about-mini-cards">
+              <div><span class="card-index mono">[ 01 ]</span><b>SHIP FAST, SHIP SAFELY</b><p>Pragmatic engineering, not just promising prototypes.</p><span class="card-mark">↗</span></div>
+              <div><span class="card-index mono">[ 02 ]</span><b>BUILD WITH INTENT</b><p>Real-world constraints make the product better.</p><span class="card-mark">✳</span></div>
+              <div><span class="card-index mono">[ 03 ]</span><b>MEASURE EVERYTHING</b><p>Latency, reliability and the everyday details.</p><span class="card-mark">↗</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="work section section-pad" id="work" data-nav="work">
+        <div class="section-topline mono reveal"><span><span class="red-dot"></span> 02 / SELECTED PROJECTS</span><span>MADE TO BE USED ↓</span></div>
+        <div class="work-heading reveal"><h2 class="section-title condensed">THINGS I'VE<br /><em>SHIPPED<span class="period">.</span></em></h2><p>Production systems made for real people, real problems and real operating conditions.</p></div>
+        <div class="projects projects-reference">
+          <article class="project-row reveal" aria-haspopup="dialog" aria-controls="projectDialog" data-project="kirana" role="button" tabindex="0" aria-label="Open KIRANA OS case study">
+            <span class="project-num mono">01 / 04</span>
+            <div class="project-copy"><h3 class="condensed">KIRANA OS</h3><span class="project-category mono project-color-green">POS / INVENTORY</span></div>
+            <div class="project-summary"><p>A storefront operating system made for real counters and real customers.</p><div class="project-tags"><span>REACT · NODE · POSTGRESQL</span></div></div>
+            <span class="project-year mono">2025</span>
+            <span class="project-open" aria-hidden="true">↗</span>
+          </article>
+          <article class="project-row reveal" aria-haspopup="dialog" aria-controls="projectDialog" data-project="bold" role="button" tabindex="0" aria-label="Open BOLD. case study">
+            <span class="project-num mono">02 / 04</span>
+            <div class="project-copy"><h3 class="condensed">BOLD.</h3><span class="project-category mono project-color-purple">PRODUCT / DESIGN</span></div>
+            <div class="project-summary"><p>A practical, visually confident product experience built around fast, purposeful interaction.</p><div class="project-tags"><span>FRONTEND · UI · EXPERIMENT</span></div></div>
+            <span class="project-year mono">2025</span>
+            <span class="project-open" aria-hidden="true">↗</span>
+          </article>
+          <article class="project-row reveal" aria-haspopup="dialog" aria-controls="projectDialog" data-project="monsoon" role="button" tabindex="0" aria-label="Open MONSOON WATCH case study">
+            <span class="project-num mono">03 / 04</span>
+            <div class="project-copy"><h3 class="condensed">MONSOON WATCH</h3><span class="project-category mono project-color-blue">WEATHER / DATA</span></div>
+            <div class="project-summary"><p>Weather intelligence and local conditions in one compact, decision-ready view.</p><div class="project-tags"><span>PYTHON · API · LIVE DATA</span></div></div>
+            <span class="project-year mono">2026</span>
+            <span class="project-open" aria-hidden="true">↗</span>
+          </article>
+          <article class="project-row reveal" aria-haspopup="dialog" aria-controls="projectDialog" data-project="tiffin" role="button" tabindex="0" aria-label="Open TIFFIN ROUTE case study">
+            <span class="project-num mono">04 / 04</span>
+            <div class="project-copy"><h3 class="condensed">TIFFIN ROUTE</h3><span class="project-category mono project-color-orange">ROUTING / LOGISTICS</span></div>
+            <div class="project-summary"><p>Streamlined last-mile delivery planning and dispatch for daily food operations.</p><div class="project-tags"><span>TYPESCRIPT · MAPS · SYSTEMS</span></div></div>
+            <span class="project-year mono">2026</span>
+            <span class="project-open" aria-hidden="true">↗</span>
+          </article>
+        </div>
+        <p class="work-tail mono reveal">FOUR SELECTED BUILDS / MORE IN MOTION <span>↗</span></p>
+      </section>
+
+      <section class="experience section section-pad" id="experience" data-nav="experience">
+        <div class="section-topline mono reveal"><span><span class="red-dot"></span> 03 / RESULTS & EXPERIENCE</span><span>THE RECEIPTS ↓</span></div>
+        <div class="experience-grid"><div class="experience-left reveal"><h2 class="section-title condensed">FAST HANDS.<br /><em>REAL RESULTS.</em></h2><div class="massive-stat condensed"><span class="counter" data-to="40">40</span><span>%</span></div><p class="stat-caption">Less waiting. Faster workflows. Systems that make an actual difference.</p><div class="small-caption mono">THE NUMBERS DO THE TALKING <span>↗</span></div></div><div class="experience-right reveal"><div class="timeline-heading mono"><span>THE JOURNEY SO FAR</span><span>2022 — NOW</span></div><div class="timeline-item"><div><h3>Senior Software Engineer</h3><p>Building reliable systems and shipping meaningful product features.</p><span class="timeline-pills"><b>BACKEND</b><b>ARCHITECTURE</b></span></div><span class="timeline-year">NOW</span></div><div class="timeline-item"><div><h3>Tech Lead / Builder</h3><p>Owning complex features from first sketch to production rollout.</p><span class="timeline-pills"><b>PLATFORM</b><b>PRODUCT</b></span></div><span class="timeline-year">2025</span></div><div class="timeline-item"><div><h3>Software Engineer</h3><p>API development, database design, performance and collaboration.</p><span class="timeline-pills"><b>API</b><b>DATABASE</b></span></div><span class="timeline-year">2024</span></div><div class="timeline-item"><div><h3>Hackathon Winner</h3><p>Turning an idea into a working product under a deadline.</p><span class="timeline-pills"><b>BUILD</b><b>SHIP</b></span></div><span class="timeline-year">2023</span></div><div class="timeline-item"><div><h3>B.Tech — Computer Science</h3><p>Where curiosity turned into the habit of making things.</p><span class="timeline-pills"><b>FOUNDATIONS</b></span></div><span class="timeline-year">2022</span></div></div></div>
+      </section>
+
+      <section class="manifesto section section-pad"><div class="manifesto-grid"><div class="manifesto-left reveal"><div class="section-topline mono"><span><span class="red-dot"></span> A PERSONAL RULE</span></div><h2 class="section-title condensed">LESS TALK.<br /><em>MORE<br />DEPLOYS.</em></h2><p>I don't just make things look good on a screen. I want them out in the world, doing the job they were built to do.</p><span class="mono manifesto-sig">BUILD → BREAK → FIX → SHIP ↗</span></div><div class="manifesto-right reveal"><div class="quote-square"><span class="quote-stamp">✳</span><div>IF IT ISN'T IN<br />PRODUCTION, IT'S<br />JUST A RUMOUR.</div><span class="quote-bottom mono">A BUILDER'S MANIFESTO — 001 ↗</span></div></div></div></section>
+
+      <section class="stack section section-pad" id="stack" data-nav="stack"><div class="section-topline mono reveal"><span><span class="red-dot"></span> 04 / MY STACK</span><span>WHAT'S UNDER THE HOOD ↓</span></div><div class="stack-heading reveal"><h2 class="section-title condensed">THE<br /><em>TOOLKIT<span class="period">.</span></em></h2><p>Not attached to tools. Attached to getting the job done — with the right technologies, thoughtful trade-offs, and sharp execution.</p></div><div class="stack-grid"><div class="stack-card reveal"><span class="stack-no mono">01 /</span><span class="stack-symbol">⌘</span><h3>Frontend Systems</h3><p>Interfaces that are fast, accessible, and actually a pleasure to use.</p><div class="stack-tags"><span>REACT</span><span>TYPESCRIPT</span><span>CSS</span></div></div><div class="stack-card reveal"><span class="stack-no mono">02 /</span><span class="stack-symbol">{ }</span><h3>Backend & APIs</h3><p>Solid foundations for products that need to scale without the drama.</p><div class="stack-tags"><span>NODE.JS</span><span>GO</span><span>POSTGRES</span></div></div><div class="stack-card reveal"><span class="stack-no mono">03 /</span><span class="stack-symbol">✳</span><h3>Applied AI</h3><p>Practical intelligence built into real workflows, not just demos.</p><div class="stack-tags"><span>PYTHON</span><span>LLMs</span><span>RAG</span></div></div><div class="stack-card reveal"><span class="stack-no mono">04 /</span><span class="stack-symbol">⌁</span><h3>Cloud & Infrastructure</h3><p>Deployments, observability, caching, queues, and keeping lights on.</p><div class="stack-tags"><span>DOCKER</span><span>AWS</span><span>REDIS</span></div></div><div class="stack-card reveal"><span class="stack-no mono">05 /</span><span class="stack-symbol">◫</span><h3>Mobile & Beyond</h3><p>Thoughtful experiences that go wherever people need them.</p><div class="stack-tags"><span>REACT NATIVE</span><span>PWA</span><span>API</span></div></div><div class="stack-card reveal"><span class="stack-no mono">06 /</span><span class="stack-symbol">↗</span><h3>Developer Experience</h3><p>Clean workflows, better tooling, quicker feedback loops.</p><div class="stack-tags"><span>GIT</span><span>CI/CD</span><span>TESTS</span></div></div></div><div class="stack-signoff mono reveal">THE BEST TOOL IS THE ONE THAT SHIPS <span>↗</span></div></section>
+
+      <div class="tech-marquee marquee-bottom" aria-hidden="true"><div class="marquee-track reverse"><span>TYPESCRIPT</span><b>✳</b><span>NODE.JS</span><b>✳</b><span>GO</span><b>✳</b><span>PYTHON</span><b>✳</b><span>POSTGRESQL</span><b>✳</b><span>REDIS</span><b>✳</b><span>KAFKA</span><b>✳</b><span>TYPESCRIPT</span><b>✳</b><span>NODE.JS</span><b>✳</b><span>GO</span><b>✳</b><span>PYTHON</span><b>✳</b><span>POSTGRESQL</span><b>✳</b><span>REDIS</span><b>✳</b><span>KAFKA</span><b>✳</b></div></div>
+
+      <section class="contact section section-pad" id="contact" data-nav="contact"><div class="section-topline mono reveal"><span><span class="red-dot"></span> 05 / THE NEXT BIG THING</span><span>OPEN FOR COLLABORATIONS ↓</span></div><div class="contact-grid"><div class="contact-copy reveal"><div class="contact-availability mono"><span class="availability-dot"></span> AVAILABLE FOR THE RIGHT PROJECT</div><h2 class="section-title condensed">LET'S BUILD<br /><em>SOMETHING<br />BOLD<span class="period">.</span></em></h2><p>Got a problem worth solving, a product worth building, or an idea too interesting to ignore? Let's make something happen.</p><div class="contact-actions"><button type="button" class="pill-button primary magnetic" id="contactButton">GET IN TOUCH <span>↗</span></button><button type="button" class="text-button" id="copyPageButton">COPY SITE LINK <span>⧉</span></button></div><div class="contact-small mono">NO PITCH DECK NECESSARY. JUST A GOOD IDEA.</div></div><div class="contact-orb-box reveal"><canvas id="contactParticles" aria-label="Animated colorful orbit of particles" role="img"></canvas><div class="orb-center">✳</div><div class="orb-instruction mono" aria-hidden="true">MOVE YOUR CURSOR TO EXPLORE ↗</div></div></div><div class="contact-bottom reveal"><span class="mono">LET'S CONNECT BEYOND THE CODE</span><div class="footer-links"><button id="footerEmail" type="button">EMAIL ↗</button><a href="#work">PROJECTS ↗</a><a href="#home">BACK TO TOP ↗</a></div></div></section>
+    </main>
+    <footer class="footer"><div class="footer-big condensed" aria-hidden="true"><span>GAURAV</span> <span>SHARMA</span></div><div class="footer-rule"></div><div class="footer-meta mono"><span>© 2026 GAURAV SHARMA. BUILT TO SHIP.</span><span>INDIA — EVERYWHERE</span><span>CRAFTED WITH CODE & CAFFEINE ✳</span><button type="button" class="motion-control" id="motionControl" aria-label="Change animation performance level: automatic" title="Choose Auto, Smooth or Full motion quality">MOTION <span class="motion-status" id="motionLabel">AUTO</span> ↻</button></div></footer>
+  </div>
+  <button class="back-to-top" id="backToTop" title="Back to top" aria-label="Back to top">↑</button>
+  <dialog id="projectDialog" class="modal-dialog" aria-labelledby="modalTitle" aria-describedby="modalDescription"><button type="button" class="dialog-close" id="closeProject" aria-label="Close project details">✕</button><span class="mono dialog-kicker">SELECTED WORK / PROJECT NOTES</span><h2 id="modalTitle" class="condensed"></h2><p id="modalDescription"></p><div class="dialog-art"><img id="modalImage" width="1440" height="900" alt="Illustrative project dashboard" loading="lazy" decoding="async" /></div><div id="modalTags" class="project-tags"></div><div class="dialog-summary-label mono">DESIGN RECONSTRUCTION / NOT A VERIFIED PRODUCT AUDIT</div><div class="dialog-details" id="modalDetails"></div><div class="dialog-footer mono">RECONSTRUCTED FROM VIDEO REFERENCE <span>↗</span></div></dialog>
+  <dialog id="contactDialog" class="modal-dialog contact-dialog" aria-labelledby="contactDialogTitle" aria-describedby="contactDialogHelp"><button type="button" class="dialog-close" id="closeContact" aria-label="Close contact form">✕</button><span class="mono dialog-kicker">LET'S BUILD SOMETHING</span><h2 class="condensed" id="contactDialogTitle">SAY HELLO<span class="period">.</span></h2><p id="contactDialogHelp">This demo can prepare and copy your message. A delivery email has not been connected, so it does not send anything automatically.</p><form id="contactForm"><div class="form-honeypot" aria-hidden="true"><label for="contactWebsite">Leave this field empty</label><input id="contactWebsite" name="website" type="text" tabindex="-1" autocomplete="off" /></div><label for="senderName">YOUR NAME</label><input id="senderName" name="name" placeholder="Your name" maxlength="80" autocomplete="name" required /><label for="senderEmail">YOUR EMAIL</label><input id="senderEmail" name="email" type="email" placeholder="you@example.com" maxlength="120" autocomplete="email" inputmode="email" required /><label for="senderMessage">YOUR MESSAGE</label><textarea id="senderMessage" name="message" placeholder="Tell me about your idea..." rows="4" maxlength="4000" required></textarea><div class="contact-dialog-actions"><button class="pill-button primary" type="submit" id="openEmailDraft">OPEN EMAIL DRAFT ↗</button><button class="pill-button secondary" id="copyMessageButton" type="button">COPY MESSAGE ⧉</button></div><p class="contact-delivery-note" id="contactDeliveryNote">No inbox is connected. Message delivery requires a verified contact address or backend.</p></form></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
