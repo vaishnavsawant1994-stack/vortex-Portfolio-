@@ -1379,3 +1379,7 @@ html[data-theme="dark"] .hero-bottom-bar .scroll-indicator{background:#181317!im
 html[data-motion-profile="economical"] .hero-ambient,html[data-motion-profile="reduced"] .hero-ambient{filter:none!important}
 html[data-motion-profile="economical"] #cursor,html[data-motion-profile="economical"] #cursorRing{display:none!important}
 @media(prefers-reduced-motion:reduce){.scroll-rail i{animation:none!important}.person-stage{transition:none!important}}
+
+/* V16 WebKit safeguard: always apply measured type size and constrain mobile wrap. */
+.hero .hero-big-wrap .hero-giant{font-size:var(--hero-fitted-size,clamp(44px,15vw,320px))!important}
+@media(max-width:680px){.hero .hero-big-wrap{left:0!important;right:0!important;width:100%!important;max-width:100%!important}.hero .hero-big-wrap .hero-giant{font-size:var(--hero-fitted-size,clamp(40px,12vw,70px))!important}}

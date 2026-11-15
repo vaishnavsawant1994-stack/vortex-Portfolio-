@@ -64,5 +64,5 @@ test('axe accessibility reports no critical violations',async({page})=>{
  const r=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21a','wcag21aa']).analyze();
  const critical=r.violations.filter(v=>v.impact==='critical');
  expect(critical.map(v=>({id:v.id,nodes:v.nodes.length}))).toEqual([]);
- if(r.violations.length) console.log('AXE FINDINGS',JSON.stringify(r.violations.map(v=>({id:v.id,impact:v.impact,nodes:v.nodes.length}))));
+ if(r.violations.length) console.log('AXE FINDINGS',JSON.stringify(r.violations.map(v=>({id:v.id,impact:v.impact,nodes:v.nodes.length,targets:v.nodes.map(n=>n.target)}))));
 });
