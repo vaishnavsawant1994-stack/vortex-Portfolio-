@@ -666,7 +666,7 @@
     const letterSpacingAt100 = 100 * currentSpace / currentSize;
     const unitWidth = glyphWidth + letterSpacingAt100 * chars.length;
     if (!Number.isFinite(unitWidth) || unitWidth <= 0) return;
-    const fontPx = 100 * Math.min(available,window.innerWidth) / unitWidth * .955;
+    const fontPx = 100 * Math.min(available,window.innerWidth) / unitWidth * .92;
     title.style.setProperty('--hero-fitted-size', `${Math.max(14,fontPx).toFixed(3)}px`);
   };
   const requestFit = () => {

@@ -14,17 +14,15 @@ test('responsive headings, portrait and centered footer remain fitted in both th
    await expect(page.locator('html')).toHaveAttribute('data-theme',theme);
    for(const width of [320,390,768,1024,1440]){
      await page.setViewportSize({width,height:width<700?844:900});
-     await page.waitForTimeout(120);
-     const result=await page.evaluate(()=>{
+     await page.evaluate(()=>window.scrollTo({top:0,behavior:'instant'}));
+     await expect.poll(async()=>page.evaluate(()=>{
        const rect=s=>document.querySelector(s).getBoundingClientRect();
        const t=rect('.hero-giant'),w=rect('.hero-big-wrap'),f=rect('.footer-big');
-       return {overflow:document.documentElement.scrollWidth-innerWidth,
+       return {overflow:Math.round(document.documentElement.scrollWidth-innerWidth),
          titleFits:t.left>=w.left-3&&t.right<=w.right+3,
          footerCentered:Math.abs((f.left+f.width/2)-innerWidth/2)<=6,
          imageLoaded:document.querySelector('.person-cutout').naturalWidth>0};
-     });
-     expect(result,{theme,width}).toMatchObject({titleFits:true,footerCentered:true,imageLoaded:true});
-     expect(result.overflow,{theme,width}).toBeLessThanOrEqual(1);
+     }),{timeout:6000,intervals:[100,150,250,400,600]}).toMatchObject({titleFits:true,footerCentered:true,imageLoaded:true,overflow:0});
    }
  }
 });

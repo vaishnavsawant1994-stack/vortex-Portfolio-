@@ -1387,3 +1387,12 @@ html[data-motion-profile="economical"] #cursor,html[data-motion-profile="economi
 /* V16 accessibility: readable Work secondary label in dark and light modes. */
 html[data-theme="dark"] #work > .section-topline > span:last-child{color:#c8bdc2!important}
 html[data-theme="light"] #work > .section-topline > span:last-child{color:#4d3d42!important}
+
+/* V16 final: readable theme-switch states and large outlined footer in light mode.
+   Animating foreground/background through low-contrast intermediate colors is disabled. */
+html[data-theme="light"] .nav .nav-link.active{color:#fff!important;background-color:#161116!important;transition:color 0s,background-color 0s!important}
+html[data-theme="light"] .hero .pill-button.primary{color:#fff!important;background:#8f1a25!important;transition:color 0s,background-color 0s!important}
+html[data-theme="light"] .hero .pill-button.primary:hover,
+html[data-theme="light"] .hero .pill-button.primary:focus-visible{color:#fff!important;background:#751320!important}
+html[data-theme="light"] .footer .footer-big,
+html[data-theme="light"] .footer .footer-big span{color:#46323a!important;-webkit-text-fill-color:#46323a!important;-webkit-text-stroke:1px #271720!important}
