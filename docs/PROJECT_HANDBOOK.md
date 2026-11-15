@@ -20,7 +20,7 @@ A feature name may denote a documented requirement or source area; actual implem
 Static HTML/CSS/JavaScript with `index.html`, `site.css`, `site.js`, `site-config.js`, `assets/`, `docs/`, `previews/`, `netlify/`. Multiple Python/JS quality scripts and release documents exist.
 
 ## 4. Current development and release status
-README states V15 staging candidate, not a reference-perfect certified clone. AI-generated portrait/sample projects and disabled mail delivery until configured are explicit limitations.
+README states V16 staging candidate, not a reference-perfect certified clone. AI-generated portrait/sample projects and disabled mail delivery until configured are explicit limitations.
 
 **Evidence hierarchy:** observed source and exact-head tests > dated reports > roadmap statements. Live deployment and third-party operations must be independently verified.
 
@@ -50,3 +50,7 @@ Every future release should assess access control, input validation, failure mod
 - [`site.css`](../site.css)
 
 **Update policy:** revise this handbook when verified source and deployment evidence changes, and retain historical test/qualification records with original dates.
+
+## V16 quality extension
+
+New source checks cover image loading fallback, light/dark overlap text, heading fit and basic interactions in five browser profiles. See the [V16 QA report](releases/QA_REPORT_V16.md) and [security/privacy checklist](SECURITY_AND_PRIVACY.md) before commercial launch or user-data collection.

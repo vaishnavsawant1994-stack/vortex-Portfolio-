@@ -20,4 +20,6 @@ This history summarizes the successive reconstructed portfolio iterations discus
 | V14 | Faster scroll rendering and optional Netlify contact handler |
 | V15 | Full-mode performance refinements, contact response validation, caching adjustments |
 
-Current state: V15 staging candidate. See `docs/RELEASE_STATUS.md` for the unresolved acceptance requirements.
+| V16 | Portrait readiness/fallback, light/dark label contrast, WebKit-fit adjustments, cursor scheduling, provider receipt checks, cross-browser automated testing and QA documentation |
+
+Current state: V16 staging candidate. See `docs/RELEASE_STATUS.md` for the unresolved acceptance requirements.

@@ -21,3 +21,8 @@ ShipStatic and other static-only hosts cannot run this Netlify Function. Use a f
 ## Required production checks
 
 Test actual public HTTP loading, all assets and fonts, theme persistence, project and contact dialogs, mobile navigation and all motion modes across Chrome/Edge, Firefox, Safari and physical phones. Record real Web Vitals and frame traces rather than assuming synthetic tests guarantee 60 FPS. Replace reconstructed imagery only with rights-cleared source assets.
+
+
+## V16 indexing and verification
+
+V16 staging URL: https://intense-halo-8kbmr8r.shipstatic.com. The public demo intentionally has `noindex, nofollow` to avoid indexing unverified sample identity and portfolio statistics. Before an authorized production launch, replace those with true content; configure a canonical HTTPS URL and site-owned absolute Open Graph screenshot; only then remove noindex. Enable the contact endpoint only on function-capable hosting after verified sender/recipient, backend keys, rate limiting, bot challenge and successful real inbox testing. A provider receipt ID is not proof of inbox arrival.

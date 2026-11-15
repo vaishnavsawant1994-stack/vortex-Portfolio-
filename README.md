@@ -2,11 +2,11 @@
 
 A video-reference-inspired, responsive **dark/light portfolio template** with cinematic scroll effects, modular static assets, and an optional Netlify contact function. The current sample portfolio displays **Gaurav Sharma** content; **VORTEX** is the theme/repository name, not the portfolio owner's identity.
 
-> **Release:** V15 staging candidate (13 November 2026). This reconstruction is not certified identical to the reference video. The portrait is AI-generated artwork, sample projects are illustrative, and email delivery is **disabled until configured**. See [Release status](docs/RELEASE_STATUS.md).
+> **Release:** V16 staging candidate (15 November 2026). This reconstruction is not certified identical to the reference video. The portrait is AI-generated artwork, sample projects are illustrative, and email delivery is **disabled until configured**. See [Release status](docs/RELEASE_STATUS.md).
 
 ## Live staging preview
 
-[View the V15 preview](https://unveiled-hub-j4y42f5.shipstatic.com) — a **static demonstration**; the Netlify contact function is not running there.
+[View the V16 staging preview](https://intense-halo-8kbmr8r.shipstatic.com) — static demonstration; the Netlify contact function is not running there.
 
 ## Quick start
 
@@ -80,3 +80,8 @@ The portfolio content, visible name, and sample projects are placeholders from t
 ## Detailed project guide
 
 The [**Project Handbook**](docs/PROJECT_HANDBOOK.md) describes the repository's specific goals, users, source architecture, functional areas, current qualification limits, development setup, security requirements and next milestones. It differentiates implemented source from unverified or planned functionality.
+
+
+## V16 improvements
+
+The V16 quality pass improves portrait decode/fallback, dark/light overlapping-label contrast, smaller type, cursor animation scheduling, metadata and contact receipt validation. GitHub CI now covers desktop Chromium/Firefox/WebKit and mobile Chrome/WebKit emulations with accessible-flow checks. The staged demo remains noindex until real identity, content and asset permissions are verified. See [V16 release notes](README_V16.md), [V16 QA](docs/releases/QA_REPORT_V16.md), and [security/privacy requirements](docs/SECURITY_AND_PRIVACY.md).

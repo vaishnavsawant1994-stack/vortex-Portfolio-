@@ -8,3 +8,5 @@
 - Names, project descriptions, statistics and portfolio narrative are sample/reference recreation content, not verified claims about any individual.
 
 Obtain appropriate permissions before portraying this as an official person's portfolio or reusing third-party imagery. No reuse license has been declared for this repository.
+
+- V16 social-sharing metadata references an existing GitHub screenshot of this derivative demonstration; it is not independently cleared original photography. Use a rights-cleared owned social image on a verified production domain.

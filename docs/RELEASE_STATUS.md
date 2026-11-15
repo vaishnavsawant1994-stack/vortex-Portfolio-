@@ -1,6 +1,6 @@
-# Release status — V15 staging candidate
+# Release status — V16 staging candidate
 
-Snapshot date: 2026-11-13
+Snapshot date: 2026-11-15
 
 ## Available
 
@@ -27,3 +27,8 @@ Snapshot date: 2026-11-13
 - Approval for distribution of any third-party copyrighted design elements/assets.
 
 **This repository is source control for the VORTEX theme, not a claim of final production certification or 100% reference fidelity.**
+
+
+## V16 qualification
+
+Source and contact changes are on main. Offline Chromium checks: 16/16 responsive dark/light combinations, interaction smoke, and 11/11 backend contract tests. New GitHub Actions jobs exercise Chromium, Firefox and WebKit with responsive layout and accessibility assertions; use the actual CI run conclusion for exact release qualification. V16 staging preview: https://intense-halo-8kbmr8r.shipstatic.com. The portrait, contact provider, production origin and physical-device performance remain externally blocked. [Full V16 QA report](releases/QA_REPORT_V16.md).

@@ -23,3 +23,7 @@ The V15 QA report records a brief **synthetic headless Chromium** Auto sample ne
 5. Validate font loading and interaction behavior on Firefox and Safari.
 
 **Rule:** Prioritize usable motion and readable content over maximal effects when a device cannot maintain smoothness.
+
+## V16 additional work
+
+High-frequency custom cursor moves now coalesce into requestAnimationFrame updates. Full motion is still opt-in; synthetic checks cannot guarantee hardware FPS. The new desktop/mobile Chromium, Firefox and WebKit CI tests check layout and functionality but are not replacements for real-user Core Web Vitals or GPU traces.
