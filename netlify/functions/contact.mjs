@@ -48,6 +48,8 @@ export default async (request) => {
       })
     });
     if (!response.ok)return json({error:'Delivery unavailable'},502);
+    const providerReceipt=await response.json().catch(()=>null);
+    if(typeof providerReceipt?.id!=='string' || !providerReceipt.id.trim())return json({error:'Delivery provider supplied no receipt'},502);
     return json({ok:true});
   } catch {return json({error:'Delivery unavailable'},502);}
 };

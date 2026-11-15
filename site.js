@@ -320,9 +320,13 @@
       cursorRing.style.transform=`translate3d(${rx}px,${ry}px,0) translate(-50%,-50%)`;
       if(Math.abs(tx-rx)+Math.abs(ty-ry)>.35)followId=requestAnimationFrame(follow);
     };
+    let cursorFrame=0;
     document.addEventListener('pointermove',e=>{
       tx=e.clientX;ty=e.clientY;
-      cursor.style.transform=`translate3d(${tx}px,${ty}px,0) translate(-50%,-50%)`;
+      if(!cursorFrame)cursorFrame=requestAnimationFrame(()=>{
+        cursorFrame=0;
+        cursor.style.transform=`translate3d(${tx}px,${ty}px,0) translate(-50%,-50%)`;
+      });
       if(!followId)followId=requestAnimationFrame(follow);
     },{passive:true});
     $$('a,button,.project-row').forEach(el => {
@@ -333,6 +337,22 @@
     // the cinematic scroll scene. This avoids competing pointer transforms.
   }
 
+  // Record successful image decode and provide a visible failure state.
+  const heroPortrait=document.querySelector('.person-cutout');
+  if(heroPortrait){
+    const stage=heroPortrait.closest('.person-stage');
+    const markFailed=()=>{document.documentElement.dataset.portraitStatus='error';stage?.classList.add('portrait-error');};
+    const markReady=()=>{
+      if(heroPortrait.naturalWidth<=0){markFailed();return;}
+      Promise.resolve(heroPortrait.decode?.()).catch(()=>{}).finally(()=>{
+        document.documentElement.dataset.portraitStatus='loaded';
+        stage?.classList.remove('portrait-error');
+      });
+    };
+    heroPortrait.addEventListener('load',markReady,{once:true});
+    heroPortrait.addEventListener('error',markFailed,{once:true});
+    if(heroPortrait.complete){if(heroPortrait.naturalWidth>0)markReady();else markFailed();}
+  }
   setupContactOrb();
   setupIntro();
 })();

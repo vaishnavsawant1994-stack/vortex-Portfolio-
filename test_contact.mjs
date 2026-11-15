@@ -24,7 +24,7 @@ await caseTest('Reject malformed name',make({...valid,name:'x'.repeat(85)}),400)
 await caseTest('Reject invalid email',make({...valid,email:'nonsense'}),400);
 await caseTest('Ignore honeypot bot',make({...valid,website:'fakebot.example'}),200);
 let sent;
-globalThis.fetch=async (url,opts)=>{sent={url,opts};return new Response('{}',{status:200});};
+globalThis.fetch=async (url,opts)=>{sent={url,opts};return new Response(JSON.stringify({id:'test-provider-message-id'}),{status:200});};
 await caseTest('Deliver valid form',make({...valid,name:'<script>bad</script>'}),200,body=>assert.equal(body.ok,true));
 assert.equal(sent.url,'https://api.resend.com/emails');
 const outgoing=JSON.parse(sent.opts.body);
@@ -33,6 +33,8 @@ assert.ok(outgoing.html.includes('&lt;script&gt;'));
 assert.equal(outgoing.to[0],'verified-to@example.org');
 assert.equal(outgoing.reply_to,'visitor@example.org');
 console.log('PASS',++n,'Escape user content and address correct recipient');
+globalThis.fetch=async()=>new Response('{}',{status:200});
+await caseTest('Provider 200 without receipt is not success',make(valid),502);
 globalThis.fetch=async()=>new Response('{}',{status:500});
 await caseTest('Upstream send failure is not success',make(valid),502);
 delete process.env.RESEND_API_KEY;

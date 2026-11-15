@@ -1365,3 +1365,17 @@ html[data-motion-profile="full"] .contact:before {filter:none!important;}
 html[data-motion-profile="full"] .modal-dialog::backdrop {backdrop-filter:none!important;}
 /* Preserve the affordance even when a hover animation is reduced. */
 @media(hover:none){.project-row:active,.pill-button:active {outline:1px solid var(--red,#ff4741);outline-offset:2px;}}
+
+/* V16: contrast-safe labels and typography. The scroll cue may overlap a black suit. */
+.hero-bottom-bar .scroll-indicator,html[data-theme="light"] .hero-bottom-bar .scroll-indicator{background:#fffaf4!important;color:#21181b!important;border:1px solid #887a80!important;padding:8px 12px;border-radius:999px;box-shadow:0 2px 12px #140c1019;isolation:isolate;font-size:11px!important;line-height:1.2;letter-spacing:.045em}
+html[data-theme="dark"] .hero-bottom-bar .scroll-indicator{background:#181317!important;color:#fff9f7!important;border-color:#b7a6ad!important}
+.hero-bottom-bar .scroll-rail{border-color:currentColor!important}
+.nav-link{font-size:max(11px,.75rem)}
+.hero-mini-label,.hero-fineprint,.section-topline,.section-topline .mono,.project-num,.project-year,.project-category,.dialog-kicker,.card-index,.hero-bottom-bar>.mono,.footer-meta .mono,.footer-meta{font-size:max(11px,.72rem);line-height:1.5}
+@media(max-width:680px){.hero-bottom-bar .scroll-indicator{font-size:11px!important;padding:7px 10px}.section-topline{font-size:11px!important}.project-num,.project-year,.project-category{font-size:11px!important}.hero-bottom-bar>.mono{font-size:10px!important}.footer-meta,.footer-meta .mono{font-size:11px!important}}
+.portrait-fallback{display:none;position:absolute;inset:auto 12% 26%;color:#ffe0d4;background:#201018ec;border:1px solid #ff8a82;line-height:1.45;font-size:11px;letter-spacing:.075em;padding:14px;text-align:center}
+.person-stage.portrait-error .portrait-fallback{display:block}
+.person-stage.portrait-error .person-cutout{display:none}
+html[data-motion-profile="economical"] .hero-ambient,html[data-motion-profile="reduced"] .hero-ambient{filter:none!important}
+html[data-motion-profile="economical"] #cursor,html[data-motion-profile="economical"] #cursorRing{display:none!important}
+@media(prefers-reduced-motion:reduce){.scroll-rail i{animation:none!important}.person-stage{transition:none!important}}
