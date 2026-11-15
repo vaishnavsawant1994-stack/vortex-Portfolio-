@@ -31,4 +31,8 @@ Snapshot date: 2026-11-15
 
 ## V16 qualification
 
-Source and contact changes are on main. Offline Chromium checks: 16/16 responsive dark/light combinations, interaction smoke, and 11/11 backend contract tests. New GitHub Actions jobs exercise Chromium, Firefox and WebKit with responsive layout and accessibility assertions; use the actual CI run conclusion for exact release qualification. V16 staging preview: https://intense-halo-8kbmr8r.shipstatic.com. The portrait, contact provider, production origin and physical-device performance remain externally blocked. [Full V16 QA report](releases/QA_REPORT_V16.md).
+Source and contact changes are on main. Offline Chromium checks: 16/16 responsive dark/light combinations, interaction smoke, and 11/11 backend contract tests. New GitHub Actions jobs exercise Chromium, Firefox and WebKit with responsive layout and accessibility assertions; use the actual CI run conclusion for exact release qualification. V16 staging preview: https://hushed-bolt-u7nq8pb.shipstatic.com. The portrait, contact provider, production origin and physical-device performance remain externally blocked. [Full V16 QA report](releases/QA_REPORT_V16.md).
+
+## V16 exact-head CI result
+
+The final V16 code commit `9780f4dbc0f6fc27ab47b7a375f67b2ecea436a2` passed [GitHub Actions run 43723825505](https://github.com/vaishnavsawant1994-stack/vortex-Portfolio-/actions/runs/43723825505): 27 browser tests passed across Chromium, Firefox, WebKit, and mobile emulations, 3 desktop-only mobile tests skipped; smoke/contact job succeeded. No axe serious/critical violations were reported in either tested theme. Final static staging deployment: https://hushed-bolt-u7nq8pb.shipstatic.com (14 files, ShipStatic success). These are simulated browser tests, not a physical-device performance or live-email certificate.

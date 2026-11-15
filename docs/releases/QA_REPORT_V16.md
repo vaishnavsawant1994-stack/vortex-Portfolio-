@@ -28,3 +28,9 @@
 - Legal owner decision on software license and permissions for commercial distribution.
 
 **Verdict:** V16 improves staging quality but does not justify claims of 100% source-video parity, zero lag on all devices or complete production certification.
+
+## Exact release verification
+
+Code SHA: `9780f4dbc0f6fc27ab47b7a375f67b2ecea436a2`. [GitHub run 43723825505](https://github.com/vaishnavsawant1994-stack/vortex-Portfolio-/actions/runs/43723825505) completed successfully: 27 Playwright tests passed and 3 were appropriately skipped; separate static/syntax/contact CI job succeeded. Chromium, Firefox, WebKit desktop plus mobile browser emulations covered image readiness, responsive heading/footer, themes, dialogs, navigation and axe scans (no serious or critical reported). The previous failed runs revealed and resulted in fixes for Ubuntu runner compatibility, WebKit title fit and dark/light contrast. Test coverage does not prove zero layout defects, full WCAG certification, exact video fidelity or physical-device 60fps.
+
+Deployment: https://hushed-bolt-u7nq8pb.shipstatic.com — provider reports success, 14 files. A full external-HTTP audit and device performance traces remain outside this environment.

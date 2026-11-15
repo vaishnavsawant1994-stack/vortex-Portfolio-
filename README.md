@@ -6,7 +6,7 @@ A video-reference-inspired, responsive **dark/light portfolio template** with ci
 
 ## Live staging preview
 
-[View the V16 staging preview](https://intense-halo-8kbmr8r.shipstatic.com) — static demonstration; the Netlify contact function is not running there.
+[View the V16 staging preview](https://hushed-bolt-u7nq8pb.shipstatic.com) — static demonstration; the Netlify contact function is not running there.
 
 ## Quick start
 
