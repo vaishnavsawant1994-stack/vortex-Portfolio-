@@ -17,12 +17,33 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: JavaScript syntax
+      - name: Static, syntax and contact validation
         run: |
           node --check site.js
           node --check site-config.js
           node --check netlify/functions/contact.mjs
-      - name: Contact handler unit tests
-        run: node test_contact.mjs
-      - name: Static asset and config validation
-        run: python3 scripts/check_static.py
+          python3 scripts/check_static.py
+          node test_contact.mjs
+  browser-release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: npm install --no-audit --no-fund
+      - run: npx playwright install --with-deps chromium firefox webkit
+      - name: Test accessibility, themes, images and interactions
+        run: npm run test:e2e
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: vortex-playwright-report
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 14

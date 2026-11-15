@@ -19,8 +19,10 @@ class Refs(HTMLParser):
 checker=Refs()
 checker.feed((ROOT/'index.html').read_text(encoding='utf-8'))
 missing=[f'{tag} => {ref}' for tag,ref in checker.refs if not (ROOT/ref).is_file()]
-for path in ['site.css','site.js','site-config.js','netlify.toml','netlify/functions/contact.mjs']:
+for path in ['site.css','site.js','site-config.js','netlify.toml','netlify/functions/contact.mjs','package.json','playwright.config.mjs','tests/site.spec.mjs']:
     if not (ROOT/path).is_file(): missing.append(path)
+markup=(ROOT/'index.html').read_text(encoding='utf-8')
+if 'noindex, nofollow' not in markup:missing.append('Staging page must be noindexed until verified')
 config=(ROOT/'site-config.js').read_text(encoding='utf-8')
 if not re.search(r"contactEndpoint:\s*''",config):
     missing.append('site-config.js: contactEndpoint must be disabled until configured')

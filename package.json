@@ -1,0 +1,15 @@
+{
+  "name": "vortex-cinematic-portfolio",
+  "version": "16.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test:e2e": "playwright test",
+    "test:contact": "node test_contact.mjs",
+    "check": "node --check site.js && node --check site-config.js && node --check netlify/functions/contact.mjs && python3 scripts/check_static.py && node test_contact.mjs"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.10.2",
+    "@playwright/test": "1.56.0"
+  }
+}
