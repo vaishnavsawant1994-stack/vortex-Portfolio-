@@ -76,3 +76,7 @@ The portfolio content, visible name, and sample projects are placeholders from t
 ## Licensing and use
 
 **No open-source license has been selected.** Repository visibility does not itself grant permission to reuse the code or third-party reference material. Obtain permission for any real person's photograph, original source design assets, and other protected materials before redistributing them.
+
+## Detailed project guide
+
+The [**Project Handbook**](docs/PROJECT_HANDBOOK.md) describes the repository's specific goals, users, source architecture, functional areas, current qualification limits, development setup, security requirements and next milestones. It differentiates implemented source from unverified or planned functionality.
