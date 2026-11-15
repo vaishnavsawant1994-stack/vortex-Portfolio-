@@ -1383,3 +1383,7 @@ html[data-motion-profile="economical"] #cursor,html[data-motion-profile="economi
 /* V16 WebKit safeguard: always apply measured type size and constrain mobile wrap. */
 .hero .hero-big-wrap .hero-giant{font-size:var(--hero-fitted-size,clamp(44px,15vw,320px))!important}
 @media(max-width:680px){.hero .hero-big-wrap{left:0!important;right:0!important;width:100%!important;max-width:100%!important}.hero .hero-big-wrap .hero-giant{font-size:var(--hero-fitted-size,clamp(40px,12vw,70px))!important}}
+
+/* V16 accessibility: readable Work secondary label in dark and light modes. */
+html[data-theme="dark"] #work > .section-topline > span:last-child{color:#c8bdc2!important}
+html[data-theme="light"] #work > .section-topline > span:last-child{color:#4d3d42!important}

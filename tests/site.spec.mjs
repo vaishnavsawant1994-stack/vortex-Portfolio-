@@ -59,10 +59,14 @@ test('mobile menu opens and closes',async({page,isMobile})=>{
  await page.keyboard.press('Escape');
  await expect(page.locator('#mobileToggle')).toHaveAttribute('aria-expanded','false');
 });
-test('axe accessibility reports no critical violations',async({page})=>{
+test('axe accessibility reports no critical or serious violations in either theme',async({page})=>{
  await ready(page);
- const r=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21a','wcag21aa']).analyze();
- const critical=r.violations.filter(v=>v.impact==='critical');
- expect(critical.map(v=>({id:v.id,nodes:v.nodes.length}))).toEqual([]);
- if(r.violations.length) console.log('AXE FINDINGS',JSON.stringify(r.violations.map(v=>({id:v.id,impact:v.impact,nodes:v.nodes.length,targets:v.nodes.map(n=>n.target)}))));
+ for(const theme of ['dark','light']){
+   if(theme==='light') await page.locator('#themeToggle').click();
+   const r=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21a','wcag21aa']).analyze();
+   const severe=r.violations.filter(v=>v.impact==='critical'||v.impact==='serious');
+   const details=severe.map(v=>({id:v.id,impact:v.impact,targets:v.nodes.map(n=>n.target)}));
+   expect(details,{theme}).toEqual([]);
+   if(r.violations.length) console.log('AXE FINDINGS',theme,JSON.stringify(r.violations.map(v=>({id:v.id,impact:v.impact,targets:v.nodes.map(n=>n.target)}))));
+ }
 });
